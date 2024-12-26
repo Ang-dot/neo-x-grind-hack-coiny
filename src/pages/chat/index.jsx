@@ -23,9 +23,11 @@ const ChatInterface = () => {
         content: `Coiny! I can help you create multisig wallets on various chains.
 
     Try these example commands:
-    • "Open a multisig wallet on Base chain with 0x123 and 0x456 as signers"
-    • "Create new safe wallet on Ethereum with 0x789 as owner"
-    • "Set up a multisig on Polygon with owners 0xabc, 0xdef requiring 2 signatures"`
+    • "Open a multisig wallet on Neo X Mainnet chain with 0x123 and 0x456 as signers"
+    • "Create new safe wallet on Neo X Mainnet with 0x789 as owner"
+    • "Set up a multisig on Neo X Mainnet with owners 0xabc, 0xdef requiring 2 signatures"
+    
+    Do make sure that you're connected to the correct network before creating a wallet.`
     }]);
     const [inputMessage, setInputMessage] = useState('');
     const [isProcessing, setIsProcessing] = useState(false);
@@ -372,9 +374,9 @@ const ChatInterface = () => {
                 }
             }
         },
-        'neox mainnet': {
+        'neo x mainnet': {
             id: 47763,
-            name: 'NeoX Mainnet',
+            name: 'Neo X Mainnet',
             rpcUrl: 'https://mainnet-1.rpc.banelabs.org',
             blockExplorer: 'https://xexplorer.neo.org',
             hasSafeApp: false,
@@ -408,9 +410,9 @@ const ChatInterface = () => {
                 }
             }
         },
-        'neox testnet': {
+        'neo x testnet t4': {
             id: 12227332,
-            name: 'NeoX Testnet T4',
+            name: 'Neo X Testnet T4',
             rpcUrl: 'https://neoxt4seed1.ngd.network',
             blockExplorer: 'https://xt4scan.ngd.network/',
             hasSafeApp: false,
@@ -724,7 +726,7 @@ const ChatInterface = () => {
                 owners: safeDetails.owners,
                 threshold: safeDetails.threshold,
                 // chain: safeDetails.chain,
-                chain: "NeoX Testnet",
+                chain: "Neo X Testnet T4",
                 signerAddress,
                 // chainId: targetNetwork.id
                 chainId: 12227332

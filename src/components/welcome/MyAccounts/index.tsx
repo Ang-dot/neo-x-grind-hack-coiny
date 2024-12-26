@@ -60,6 +60,18 @@ const AccountsList = ({ safes, onLinkClick }: AccountsListProps) => {
   return (
     <Box data-testid="sidebar-safe-container" className={css.container}>
       <Box className={css.myAccounts}>
+        <div className="flex items-center justify-center mb-10 text-center flex-col">
+          <span className="text-[#E8A616] inline-block mb-8 font-londrina text-[35px] sm:text-[55px] md:text-[100px] leading-tight sm:leading-relaxed md:leading-[94.64px]">
+            Demo
+          </span>
+          <iframe
+            src="https://drive.google.com/file/d/1NjQSg84FTifilEQqZ7tXtTyFlx-Im8bo/preview"
+            width="640"
+            height="480"
+            allow="autoplay"
+            className="max-w-full aspect-[4/3]"
+          ></iframe>
+        </div>
         <Box className={css.header}>
           <Typography variant="h1" fontWeight={700} className={css.title}>
             Safe accounts
@@ -68,6 +80,18 @@ const AccountsList = ({ safes, onLinkClick }: AccountsListProps) => {
             <CreateButton isPrimary={!!wallet} />
           </Track>
         </Box>
+        <button className="group relative w-full bg-gray-600">
+          <Link href={AppRoutes.chat.index}>
+            <div className="w-full p-2 group-hover:bg-black transition duration-300 ease-in-out">
+              <h2 className="text-white font-londrina font-[1000] text-2xl sm:text-3xl md:text-[35px] leading-tight sm:leading-relaxed md:leading-[56.78px] transition duration-300 ease-in-out">
+                <span className="group-hover:hidden">Getting Started with AI Agent</span>
+                <span className="hidden group-hover:inline underline text-[#909B0E]">
+                  Getting Started with AI Agent
+                </span>
+              </h2>
+            </div>
+          </Link>
+        </button>
 
         <PaginatedSafeList
           title="My accounts"

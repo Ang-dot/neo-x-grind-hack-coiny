@@ -111,6 +111,8 @@ const FraudDetection: FC = () => {
               <div>Analyzing transaction data for potential fraud...</div>
               <CircularProgress />
             </>
+          ) : !shouldFetchNotice ? (
+            <></>
           ) : features ? (
             <div>
               <div className="border-black border-2 bg-[#FFFDEA] rounded-xl p-4">
@@ -133,7 +135,11 @@ const FraudDetection: FC = () => {
             </div>
           )}
         </div>
-        <button className="pixel-btn w-36" onClick={handleDetectFraud} disabled={chainId !== 84532 || !address}>
+        <button
+          className="pixel-btn w-36"
+          onClick={handleDetectFraud}
+          disabled={chainId !== 84532 || !address || shouldFetchNotice}
+        >
           Detect Fraud
         </button>
         <Image

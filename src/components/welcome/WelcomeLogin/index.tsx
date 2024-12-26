@@ -50,6 +50,18 @@ const WelcomeLogin = () => {
         <div className={wallet ? 'm-4 lg:m-7' : ''}>
           <WalletLogin onLogin={onLogin} onContinue={redirect} />
         </div>
+        <button className="group relative w-full bg-gray-600">
+          <Link href={AppRoutes.chat.index}>
+            <div className="w-full p-2 group-hover:bg-black transition duration-300 ease-in-out">
+              <h2 className="text-white font-londrina font-[1000] text-2xl sm:text-3xl md:text-[35px] leading-tight sm:leading-relaxed md:leading-[56.78px] transition duration-300 ease-in-out">
+                <span className="group-hover:hidden">Getting Started with AI Agent</span>
+                <span className="hidden group-hover:inline underline text-[#909B0E]">
+                  Getting Started with AI Agent
+                </span>
+              </h2>
+            </div>
+          </Link>
+        </button>
         {!wallet && (
           <button className="group relative w-full">
             <Link href={AppRoutes.newSafe.load}>

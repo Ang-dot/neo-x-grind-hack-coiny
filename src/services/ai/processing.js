@@ -20,8 +20,8 @@ class ProcessingService {
       'rome protocol',
       'hedera testnet',
       'scroll sepolia',
-      'neox testnet',
-      'neox mainnet',
+      'neo x testnet t4',
+      'neo x mainnet',
     ].sort((a, b) => b.length - a.length);
   }
 
@@ -48,6 +48,12 @@ class ProcessingService {
       'rome': 'rome protocol',
       'hedera': 'hedera testnet',
       'scroll': 'scroll sepolia',
+      'neo': 'neo x mainnet',
+      'neox mainnet': 'neo x mainnet',
+      'neox': 'neo x mainnet',
+      'neo x testnet': 'neo x testnet t4',
+      'neox testnet': 'neo x testnet t4',
+      'neo testnet': 'neo x testnet t4',
     };
 
     return chainMappings[normalizedChain] || normalizedChain;
